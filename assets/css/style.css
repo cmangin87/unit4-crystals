@@ -1,0 +1,20 @@
+* {
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+text-align: center;
+image-orientation: from-image
+}
+
+p {
+    font-size: 75px;
+    text: white;
+    background-image: url("../images/crystalbackground.png");
+}
+
+.div {
+    align: center;
+    float: left;
+}
+
+ul {
+    font-size: 16px;
+}
