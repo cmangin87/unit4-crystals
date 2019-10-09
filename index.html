@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,8 @@
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/images/">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>CrystalsCollector!</title>
 
@@ -17,67 +19,64 @@
 
 <body>
     <div class="header">
-            <p class="text-white bg-dark"><strong>CrystalsCollector!</strong></p>
-            
-            <h3><li class="list-group-item list-group-item-dark"><marquee behavior="scroll" direction="left" scrollamount="30">Here are your instructions. Make sure to read carefully. Good luck!</marquee></li></h3>
+        <p class="text-white bg-dark"><strong>CrystalsCollector!</strong></p>
 
-                    <ul class="list-group">
-                            <li class="list-group-item">**You will be given a random "Target" number at the start of the game**
-                             <br>
-                            **There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score**
-                             <br>
-                            **You win the game by matching your total score to the random number and you lose the game if your total score goes above that random number**
-                             <br>
-                            **The value of each crystal is hidden until you click on it**
-                              <br>
-                            **Each time when the game starts, the game will change the values of each crystal**</li>
-                         </ul>
-                        </p>
-                    </div>
-                </div>
-        <img src="assets/images/thinkingman.jpg" style="width:22em; height:38em; float: left;">
-        <img src="assets/images/thinkingman2.jpg" style="width:22em; height:38em; float: right;">
+        <h3>
+            <li class="list-group-item list-group-item-dark">
+                <marquee behavior="scroll" direction="left" scrollamount="30">Here are your instructions. Make sure to
+                    read carefully. Good luck!</marquee>
+            </li>
+        </h3>
 
-        <br>
-
-        <div class="buttons">
-                <button id="blue"><img src="./assets/images/bluecrystal.jpg" style="width:10em; height:10em;" alt="Blue Crystal"></button>
-                <button id="red"><img src="./assets/images/redcrystal.jpg" style="width:10em; height:10em;" alt="Red Crystal"></button>
-                <button id="green"><img src="./assets/images/greencrystal.jpg" style="width:10em; height:10em;" alt="Green Crystal"></button>
-                <button id="yellow"><img src="./assets/images/yellowcrystal.jpg" style="width:10em; height:10em;" alt="Yellow Crystal"></button>
-            </div>
-            <br>
-            <br>
-
-            <div class="targetScore">
-                    <h2>Target: 
-                        <span id="targetnumber"></span>
-                    </h2>
-                </div>
+        <ul class="list-group">
+            <li class="list-group-item">**You will be given a random "Target" number at the start of the game**
                 <br>
-
-            <div class="userScore">
-                    <h2>Your Score: 
-                        <span id="userScore"></span>
-                    </h2>
-                </div>
+                **There are four crystals below. By clicking on a crystal, you will add a specific amount of points to
+                your total score**
                 <br>
+                **You win the game by matching your total score to the random number and you lose the game if your total
+                score goes above that random number**
                 <br>
+                **The value of each crystal is hidden until you click on it**
+                <br>
+                **Each time when the game starts, the game will change the values of each crystal**</li>
+        </ul>
+        </p>
+    </div>
+    </div>
+    <img src="assets/images/thinkingman.jpg" style="width:22em; height:38em; float: left;">
+    <img src="assets/images/thinkingman2.jpg" style="width:22em; height:38em; float: right;">
 
-                <div class="WinsLosses">
-                        <h5 id="wins">Wins:
-                            <br>
-                            <span id="gameWins"></span>
-                        </h5>
-            
-                        <h5 id="losses">Losses:
-                            <br>
-                            <span id="gameLosses"></span>
-                        </h5>
-                        <br>
-            
-                    </div>
-        
+    <div id="target">
+        <p id="numGuess"><strong>Target Number:</strong><br> <span id="targetnumber"></span></p>
+    </div>
+    <br>
+    <div id="userScore">
+        <p id="#gameWins">Wins: <span id="wins"></span></p>
+        <p id="#gameLosses">Losses: <span id="losses"></span></p>
+    </div>
+
+    <div class="back">
+        <button id="blue"><img src="./assets/images/bluecrystal.jpg" style="width:10em; height:10em;"
+                alt="Blue Crystal"></button>
+        <button id="red"><img src="./assets/images/redcrystal.jpg" style="width:10em; height:10em;"
+                alt="Red Crystal"></button>
+        <button id="green"><img src="./assets/images/greencrystal.jpg" style="width:10em; height:10em;"
+                alt="Green Crystal"></button>
+        <button id="yellow"><img src="./assets/images/yellowcrystal.jpg" style="width:10em; height:10em;"
+                alt="Yellow Crystal"></button>
+    </div>
+    <br>
+    <br>
+
+    <div id="score">
+        <p id="score-txt"><strong>Your Score:</strong></p>
+    </div>
+
+    <div id="score-back">
+        <div id="currentScore"></div>
+    </div>
+
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
@@ -86,4 +85,5 @@
     <script src="./assets/javascript/game.js"></script>
 
 </body>
+
 </html>

@@ -1,20 +1,21 @@
 * {
-font-family: Verdana, Geneva, Tahoma, sans-serif;
-text-align: center;
-image-orientation: from-image
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    image-orientation: from-image
+}
+
+#target {
+    font-size: 50px;
+}
+
+#score {
+    font-size: 50px;
 }
 
 p {
-    font-size: 75px;
-    text: white;
-    background-image: url("../images/crystalbackground.png");
+    font-size: 30px;
 }
 
-.div {
-    align: center;
-    float: left;
-}
-
-ul {
-    font-size: 16px;
+#score-back {
+    font-size: 30px;
 }
